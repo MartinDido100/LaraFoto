@@ -31,22 +31,25 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     LaraFoto
                 </a>
-                <div class="search">
-                    
-                    <form action="" method="GET" id="searchForm">
-
-                        <div class="row">                            
-                            <div class="form-group col">
-                                <input id="searchValue" type="text" class="form-control" id="searchBox" placeholder="Buscar usuarios...">
+                @if (Auth::user())
+                    <div class="search">
+                        
+                        <form action="" method="GET" id="searchForm">
+                        
+                            <div class="row">                            
+                                <div class="form-group col">
+                                    <input id="searchValue" type="text" class="form-control" id="searchBox" placeholder="Buscar usuarios...">
+                                </div>
+                            
+                                <div class="form-group col btn-search">
+                                    <button type="submit" class="btn btn-primary">Buscar</button>
+                                </div>
                             </div>
-    
-                            <div class="form-group col btn-search">
-                                <button type="submit" class="btn btn-primary">Buscar</button>
-                            </div>
-                        </div>
+                        
+                        </form>
+                    </div>                    
+                @endif
 
-                    </form>
-                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
