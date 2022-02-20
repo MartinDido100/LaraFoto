@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'LaraFoto'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1EB87FEB9AC743F18CF647AB772C0A3D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9612E51342FB428ABC5E25C18F105BE8 }}
           package: .
