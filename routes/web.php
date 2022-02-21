@@ -48,5 +48,5 @@ Route::put('image/update',[ImageController::class,'update'])->name('image.update
 Route::post('comment/store',[CommentController::class,'store'])->name('comment.store');
 
 //Likes
-Route::get('like/{image_id}',[LikeController::class,'like'])->name('like');
-Route::get('dislike/{image_id}',[LikeController::class,'dislike'])->name('dislike');
+Route::get('like/{image_id}/{cantLikes}',[LikeController::class,'like'])->name('like');
+Route::get('dislike/{image_id}/{cantLikes}',[LikeController::class,'dislike'])->name('dislike');

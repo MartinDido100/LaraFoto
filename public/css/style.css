@@ -48,7 +48,8 @@
 }
 
 .card{
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .cont{
@@ -57,6 +58,7 @@
     align-items: center;
     flex-direction: column;
     gap: 3em;
+    width: 100%;
 }
 
 .gap{
@@ -91,7 +93,10 @@
 }
 
 .main{
-    margin-top: 7em;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .desc-date{
@@ -183,7 +188,7 @@ textarea{
 .data-user{
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 100%;
     justify-content: flex-start;
     gap: 2.5em;
     align-items: center;
@@ -244,7 +249,30 @@ textarea{
 }
 
 .search{
-    width: 600px;
-    margin-left: 1em;
-    padding: 1em 0;
+    width: 80%;
+    max-width: 900px;
+    align-self: center;
+    margin-bottom: 4em;
+}
+
+.container{
+    width: 90%;
+}
+
+.gap{
+    width: 100%;
+}
+
+.nav-item{
+    white-space: nowrap;
+}
+
+#searchForm{
+    display: flex;
+    gap: .6em;
+}
+
+.col-md-8{
+    display: flex;
+    justify-content: center;
 }

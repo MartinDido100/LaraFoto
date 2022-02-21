@@ -12,7 +12,7 @@ class LikeController extends Controller
         $this->middleware('auth');
     }
 
-    public function like($image_id){
+    public function like($image_id,$cantLikes){
         
         $user = Auth::user();
 
@@ -26,8 +26,11 @@ class LikeController extends Controller
     
             $like->save();
 
+            $cantLikes++;
+
             return response()->json([
-                'like' => $like
+                'like' => $like,
+                'likeNumber' => $cantLikes
             ]);
         }else{
             return response()->json([
@@ -37,7 +40,7 @@ class LikeController extends Controller
 
     }
 
-    public function dislike($image_id){
+    public function dislike($image_id,$cantLikes){
 
         $user = Auth::user();
 
@@ -45,8 +48,10 @@ class LikeController extends Controller
 
         if($like){
             $like->delete();
+            $cantLikes--;
             return response()->json([
-                'like' => $like
+                'like' => $like,
+                'likeNumber' => $cantLikes
             ]);
         }else{
             return response()->json([

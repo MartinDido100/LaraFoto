@@ -132,9 +132,9 @@
                 
                 <span class="likes-number" data-id="{{ $image->id }}">{{ count($image->likes) }}</span>
                 @if ($user_like)
-                    <img src="{{ asset('img/heart-red.png') }}" alt="Heart" class="heart btn-like" data-id="{{ $image->id }}">
+                    <img src="{{ asset('img/heart-red.png') }}" alt="Heart" class="heart btn-like" data-id="{{ $image->id }}" data-number="{{ count($image->likes) }}">
                 @else
-                    <img src="{{ asset('img/heart.png') }}" alt="Heart" class="heart btn-dislike" data-id="{{ $image->id }}">
+                    <img src="{{ asset('img/heart.png') }}" alt="Heart" class="heart btn-dislike" data-id="{{ $image->id }}" data-number="{{ count($image->likes) }}">
                 @endif
             </div>
         </div>

@@ -2,6 +2,8 @@
 
 @section('content')
 
+@include('includes.searchbar')
+
     <div class="container">
         <div class="row justify-content-center gap">
             <div class="col-md-8 cont profile-cont">
