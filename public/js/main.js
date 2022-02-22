@@ -1,4 +1,4 @@
-let url = 'https://lara-foto.herokuapp.com'
+let url = 'https://lara-foto.azurewebsites.net'
 
 window.addEventListener('load', () => {
 
