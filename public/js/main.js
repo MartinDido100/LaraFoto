@@ -1,4 +1,4 @@
-let url = 'https://hidden-depths-14559.herokuapp.com'
+let url = 'https://lara-foto.herokuapp.com'
 
 window.addEventListener('load', () => {
 
