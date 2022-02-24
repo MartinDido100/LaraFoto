@@ -4,7 +4,7 @@
         <div class="card-header image-header">
             @if(!$profile)
                 @if($image->user->image)
-                    <img src="{{ route('user.avatar',['filename' => $image->user->image]) }}" alt="Avatar" class="avatar image-avatar">
+                <img src="{{ asset('users/'.$image->user->image) }}" alt="Avatar" class="avatar image-avatar">
                 @endif
                 <a href="{{ route('user.profile',['id' => $image->user->id]) }}" class="profile-link">
                     <p class="image-p">{{ $image->user->name . ' ' . $image->user->surname }} | {{ $image->user->nick }}</p>
@@ -115,7 +115,7 @@
 
     <div class="card-body body-cont">
         <div class="image-cont">
-            <img src="{{ route('image.file',['filename' => $image->image_path]) }}" class="image">
+            <img src="{{ asset("images/$image->image_path") }}" class="image">
         </div>
         <div class="likes">
             <div class="description-cont">
